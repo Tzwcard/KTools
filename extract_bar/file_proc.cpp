@@ -133,7 +133,7 @@ int FileProcessing::_write_output_data(
 	const FileInfo& fi
 ) {
 	if (!_fs.is_open()) return -1;
-	if (fi.size == 0) return -2;
+	if (fi.size == 0) return 0;
 
 	auto filepath = fs_helper_gen_filepath(
 		_out_path,
